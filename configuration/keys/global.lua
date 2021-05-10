@@ -1,4 +1,5 @@
 local awful = require('awful')
+local gears = require('gears')
 require('awful.autofocus')
 local beautiful = require('beautiful')
 local hotkeys_popup = require('awful.hotkeys_popup').widget
@@ -6,14 +7,16 @@ local hotkeys_popup = require('awful.hotkeys_popup').widget
 local modkey = require('configuration.keys.mod').modKey
 local altkey = require('configuration.keys.mod').altKey
 local apps = require('configuration.apps')
+local double_tap_timer = nil
 -- Key bindings
 local globalKeys =
   awful.util.table.join(
   -- Hotkeys
   awful.key({modkey}, 'F1', hotkeys_popup.show_help, {description = 'Show help', group = 'awesome'}),
   -- Tag browsing
-  awful.key({modkey}, 'w', awful.tag.viewprev, {description = 'view previous', group = 'tag'}),
-  awful.key({modkey}, 's', awful.tag.viewnext, {description = 'view next', group = 'tag'}),
+  -- awful.key({modkey}, 'w', awful.tag.viewprev, {description = 'view previous', group = 'tag'}),
+  -- awful.key({modkey}, 'e', awful.tag.viewnext, {description = 'view next', group = 'tag'}),
+  awful.key({modkey}, 'w', awful.tag.viewnext, {description = 'view next', group = 'tag'}),
   awful.key({altkey, 'Control'}, 'Up', awful.tag.viewprev, {description = 'view previous', group = 'tag'}),
   awful.key({altkey, 'Control'}, 'Down', awful.tag.viewnext, {description = 'view next', group = 'tag'}),
   awful.key({modkey}, 'Escape', awful.tag.history.restore, {description = 'go back', group = 'tag'}),
@@ -148,6 +151,7 @@ local globalKeys =
     end,
     {description = 'Open a browser', group = 'launcher'}
   ),
+
   -- Standard program
   awful.key(
     {modkey},
@@ -156,6 +160,14 @@ local globalKeys =
       awful.spawn(apps.default.terminal)
     end,
     {description = 'Open a terminal', group = 'launcher'}
+  ),
+   awful.key(
+    {modkey},
+    's',
+    function()
+      awful.spawn(apps.default.settings)
+    end,
+    {description = 'Open a Settings', group = 'launcher'}
   ),
   awful.key({modkey, 'Control'}, 'r', _G.awesome.restart, {description = 'reload awesome', group = 'awesome'}),
   awful.key({modkey, 'Control'}, 'q', _G.awesome.quit, {description = 'quit awesome', group = 'awesome'}),

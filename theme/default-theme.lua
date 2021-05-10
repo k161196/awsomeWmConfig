@@ -11,6 +11,7 @@ theme.font = 'Roboto medium 10'
 
 -- Primary
 theme.primary = mat_colors.deep_orange
+theme.red = mat_colors.red
 
 -- Accent
 theme.accent = mat_colors.pink
@@ -99,7 +100,8 @@ local awesome_overrides =
 
   --Client
   theme.border_width = dpi(2)
-  theme.border_focus = theme.primary.hue_500
+  -- theme.border_focus = theme.primary.hue_500
+  theme.border_focus = theme.red.hue_500
   theme.border_normal = theme.background.hue_800
 end
 return {

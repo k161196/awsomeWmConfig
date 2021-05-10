@@ -16,7 +16,11 @@ return {
     region_screenshot = 'flameshot gui -p ~/Pictures',
     delayed_screenshot = 'flameshot screen -p ~/Pictures -d 5000',
     browser = 'brave-browser',
-    editor = 'gedit', -- gui text editor
+    chrome = 'code',
+    -- editor = 'gedit', -- gui text editor
+    editor = 'code', -- gui text editor
+    settings = 'gnome-control-center', -- gui text editor
+    
     social = 'discord',
     game = rofi_command,
     files = 'nautilus',
@@ -33,11 +37,14 @@ return {
     'xfce4-power-manager', -- Power manager
      'flameshot',
      'synology-drive -minimized',
-     'steam -silent',
+    --  'steam -silent',
     'feh --randomize --bg-fill ~/.wallpapers/*',
     '/usr/bin/variety',
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script
-    '~/.config/awesome/configuration/awspawn' -- Spawn "dirty" apps that can linger between sessions
+    '~/.config/awesome/configuration/awspawn', -- Spawn "dirty" apps that can linger between sessions
+    'xinput set-prop "ELAN1300:00 04F3:3087 Touchpad" "libinput Tapping Enabled" 1',
+    'xinput set-prop "ELAN1300:00 04F3:3087 Touchpad" "libinput Natural Scrolling Enabled" 1',
+    'xinput set-prop "ELAN1300:00 04F3:3087 Touchpad" "libinput Natural Scrolling Enabled" 1'
   }
 }
