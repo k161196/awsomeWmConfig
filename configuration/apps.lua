@@ -16,7 +16,8 @@ return {
     region_screenshot = 'flameshot gui -p ~/Pictures',
     delayed_screenshot = 'flameshot screen -p ~/Pictures -d 5000',
     browser = 'brave-browser',
-    chrome = 'code',
+    chrome = 'google-chrome-stable',
+    postman = 'gtk-launch brave-mfmknabcbemhbjkdppkoclnbiogmkllh-Default.desktop',
     -- editor = 'gedit', -- gui text editor
     editor = 'code', -- gui text editor
     settings = 'gnome-control-center', -- gui text editor
