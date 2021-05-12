@@ -172,7 +172,7 @@ local globalKeys =
   awful.key({modkey, 'Control'}, 'r', _G.awesome.restart, {description = 'reload awesome', group = 'awesome'}),
   awful.key({modkey, 'Control'}, 'q', _G.awesome.quit, {description = 'quit awesome', group = 'awesome'}),
   awful.key(
-    {altkey, 'Shift'},
+    {altkey, modkey},
     'Right',
     function()
       awful.tag.incmwfact(0.05)
@@ -180,15 +180,47 @@ local globalKeys =
     {description = 'Increase master width factor', group = 'layout'}
   ),
   awful.key(
-    {altkey, 'Shift'},
+    {altkey,modkey },
     'Left',
     function()
       awful.tag.incmwfact(-0.05)
     end,
     {description = 'Decrease master width factor', group = 'layout'}
   ),
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Right',
+  --   function()
+  --     awful.tag.incmwfact(0.05)
+  --   end,
+  --   {description = 'Increase master width factor', group = 'layout'}
+  -- ),
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Left',
+  --   function()
+  --     awful.tag.incmwfact(-0.05)
+  --   end,
+  --   {description = 'Decrease master width factor', group = 'layout'}
+  -- ),
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Down',
+  --   function()
+  --     awful.client.incwfact(0.05)
+  --   end,
+  --   {description = 'Decrease master height factor', group = 'layout'}
+  -- ),
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Up',
+  --   function()
+  --     awful.client.incwfact(-0.05)
+  --   end,
+  --   {description = 'Increase master height factor', group = 'layout'}
+  -- ),
   awful.key(
-    {altkey, 'Shift'},
+    {altkey, modkey},
     'Down',
     function()
       awful.client.incwfact(0.05)
@@ -196,7 +228,7 @@ local globalKeys =
     {description = 'Decrease master height factor', group = 'layout'}
   ),
   awful.key(
-    {altkey, 'Shift'},
+    {altkey, modkey},
     'Up',
     function()
       awful.client.incwfact(-0.05)
@@ -400,13 +432,13 @@ local globalKeys =
     end
   ),
   -- System Monitor hotkey
-  awful.key(
-    {modkey},
-    'm',
-    function()
-      awful.util.spawn_with_shell('mate-system-monitor')
-    end
-  ),
+  -- awful.key(
+  --   {modkey},
+  --   'm',
+  --   function()
+  --     awful.util.spawn_with_shell('mate-system-monitor')
+  --   end
+  -- ),
   -- Kill VLC
   awful.key(
     {modkey},

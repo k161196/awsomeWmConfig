@@ -16,11 +16,30 @@ local clientKeys =
   ),
   awful.key(
     {modkey},
+    'h',
+    function(c)
+        c.minimized = true
+        c:raise()
+    end,
+    {description = 'toggle fullscreen', group = 'client'}
+  ),
+  awful.key(
+    {modkey},
     'q',
     function(c)
       c:kill()
     end,
     {description = 'close', group = 'client'}
+  ),
+  awful.key(
+    {modkey},
+    'm',
+    function(c)
+      -- c.fullscreen = not c.fullscreen
+      -- c:raise()
+      awful.client.setmaster(c)
+    end,
+    {description = 'set master', group = 'client'}
   )
 )
 
