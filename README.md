@@ -19,7 +19,7 @@ An almost desktop environment made with [AwesomeWM](https://awesomewm.org/) foll
 #### Debian-Based
 
 ```
-sudo apt install awesome fonts-roboto rofi compton i3lock xclip qt5-style-plugins materia-gtk-theme lxappearance xbacklight flameshot nautilus xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome -y
+sudo apt install awesome kitty fonts-roboto rofi compton i3lock xclip qt5-style-plugins materia-gtk-theme lxappearance xbacklight flameshot nautilus xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome -y
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 ```
 
@@ -52,12 +52,12 @@ wget -qO- https://git.io/papirus-icon-theme-install | sh
 
 Arch-Based Installs
 ```
-git clone https://github.com/ChrisTitusTech/titus-awesome ~/.config/awesome
+git clone https://github.com/k161196/awsomeWmConfig.git ~/.config/awesome
 ```
 
 Debian-Based Installs
 ```
-git clone --branch debian https://github.com/ChrisTitusTech/titus-awesome ~/.config/awesome
+git clone --branch main https://github.com/k161196/awsomeWmConfig.git ~/.config/awesome
 ```
 
 ### 3) Set the themes
@@ -85,7 +85,13 @@ QT_QPA_PLATFORMTHEME=gtk2
 
 The first variable fixes most indicators (especially electron based ones!), the second tells Qt and KDE applications to use your gtk2 theme set through lxappearance.
 
-### 5) Read the documentation
+
+### 5) xinput 
+    ```
+    xinput list
+    ```
+    select Touchpad replace in app.lua
+### 6) Read the documentation
 
 The documentation live within the source code.
 
