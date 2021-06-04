@@ -28,4 +28,5 @@ return {
   terminal = dir .. '/terminal.svg',
   chrome = dir .. '/google-chrome.svg',
   api = dir .. '/api.svg',
+  notion = dir .. '/notion.svg'
 }

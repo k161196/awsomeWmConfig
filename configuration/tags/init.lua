@@ -40,6 +40,12 @@ local tags = {
     defaultApp = apps.default.social,
     screen = 1
   },
+  {
+    icon = icons.notion,
+    type = 'notion',
+    defaultApp = apps.default.notion,
+    screen = 1
+  },
 
   -- {
   --   icon = icons.game,

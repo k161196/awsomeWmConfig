@@ -19,6 +19,7 @@ return {
     browser = 'brave-browser',
     chrome = 'google-chrome-stable',
     postman = 'gtk-launch brave-mfmknabcbemhbjkdppkoclnbiogmkllh-Default.desktop',
+    notion = 'gtk-launch brave-momfioececahhohbolddgklgdgacbedf-Default.desktop',
     -- editor = 'gedit', -- gui text editor
     editor = 'code', -- gui text editor
     settings = 'gnome-control-center', -- gui text editor
