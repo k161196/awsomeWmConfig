@@ -30,6 +30,22 @@ yay -S awesome rofi picom i3lock-fancy xclip ttf-roboto polkit-gnome materia-the
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 ```
 
+ #### Install Slasck
+
+ ```
+ sudo snap install slack --classic
+ ```
+
+
+
+ #### Install Trello
+
+
+
+```
+sudo snap install trello-desktop
+```
+
 #### Program list
 
 - [AwesomeWM](https://awesomewm.org/) as the window manager - universal package install: awesome
@@ -102,3 +118,23 @@ The project is split in functional directories and in each of them there is a re
 * [Module](./module) contain all the **features** available
 * [Theme](./theme) hold all the **aesthetic** aspects
 * [Widget](./widget) contain all the **widgets** available
+
+
+clone https://github.com/natnat-mc/brightnessctl.git
+make
+sudo make install
+
+
+sudo apt install blueman
+
+To start the Bluetooth service, run this command:
+
+sudo systemctl start bluetooth.service
+To make it persistent after reboot, use this command:
+
+sudo systemctl enable bluetooth.service
+Finally, check the status of Bluetooth service using:
+
+sudo systemctl status bluetooth.service
+
+

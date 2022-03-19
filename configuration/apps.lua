@@ -9,7 +9,8 @@ return {
   -- List of apps to start by default on some actions
   default = {
     -- terminal = 'terminator',
-    terminal = 'kitty',
+    -- terminal = 'kitty',
+    terminal = 'gnome-terminal',
     rofi = rofi_command,
     lock = 'i3lock-fancy',
     quake = 'terminator',
@@ -42,12 +43,12 @@ return {
      'synology-drive -minimized',
     --  'steam -silent',
     'feh --randomize --bg-fill ~/.wallpapers/*',
-    '/usr/bin/variety',
+    -- '/usr/bin/variety',
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script
     '~/.config/awesome/configuration/awspawn', -- Spawn "dirty" apps that can linger between sessions
-    'xinput set-prop "ELAN1300:00 04F3:3087 Touchpad" "libinput Tapping Enabled" 1',
-    'xinput set-prop "ELAN1300:00 04F3:3087 Touchpad" "libinput Natural Scrolling Enabled" 1',
-    'xinput set-prop "ELAN1300:00 04F3:3087 Touchpad" "libinput Natural Scrolling Enabled" 1'
+    'xinput set-prop "SYNA32AD:00 06CB:CD50 Touchpad" "libinput Tapping Enabled" 1',
+    'xinput set-prop "SYNA32AD:00 06CB:CD50 Touchpad" "libinput Natural Scrolling Enabled" 1',
+    'xinput set-prop "SYNA32AD:00 06CB:CD50 Touchpad" "libinput Natural Scrolling Enabled" 1'
   }
 }

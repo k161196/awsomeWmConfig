@@ -9,7 +9,28 @@ local mat_icon_button = require('widget.material.icon-button')
 local mat_icon = require('widget.material.icon')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('theme.icons')
+local battery_widget = require("battery-widget")
 
+local BAT0 = battery_widget {
+    ac = "ADP1",
+    adapter = "BAT0",
+    ac_prefix = "🔌",
+    battery_prefix = "",
+    percent_colors = {
+        { 25, "red"   },
+        { 50, "orange"},
+        {999, "green" },
+    },
+    listen = true,
+    timeout = 10,
+    widget_text = "${AC_BAT}${color_on}${percent}%${color_off}",
+    widget_font = "Deja Vu Sans Mono 12",
+    tooltip_text = "Battery ${state}${time_est}\nCapacity: ${capacity_percent}%",
+    alert_threshold = 5,
+    alert_timeout = 0,
+    alert_title = "Low battery !",
+    alert_text = "${AC_BAT}${time_est}"
+}
 -- Titus - Horizontal Tray
 local systray = wibox.widget.systray()
   systray:set_horizontal(true)
@@ -132,6 +153,7 @@ local TopPanel = function(s)
         wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
         -- Layout box
         LayoutBox(s),
+        BAT0,
         -- Clock
         clock_widget,
       }
