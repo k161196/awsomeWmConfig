@@ -21,6 +21,7 @@ return {
     chrome = 'google-chrome-stable',
     postman = 'gtk-launch brave-mfmknabcbemhbjkdppkoclnbiogmkllh-Default.desktop',
     notion = 'gtk-launch brave-momfioececahhohbolddgklgdgacbedf-Default.desktop',
+    youtube = 'gtk-launch brave-agimnkijcaahngcdmfeangaknmldooml-Profile_1.desktop',
     -- editor = 'gedit', -- gui text editor
     editor = 'code', -- gui text editor
     settings = 'gnome-control-center', -- gui text editor

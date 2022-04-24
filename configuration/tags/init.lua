@@ -10,18 +10,24 @@ local tags = {
     defaultApp = apps.default.editor,
     screen = 1
   },
+  {
+    icon = icons.code,
+    type = 'code',
+    defaultApp = apps.default.editor,
+    screen = 1
+  },
     {
     icon = icons.terminal,
     type = 'terminal',
     defaultApp = apps.default.terminal,
     screen = 1
   },
-  {
-    icon = icons.api,
-    type = 'postman',
-    defaultApp = apps.default.postman,
-    screen = 1
-  },
+  -- {
+  --   icon = icons.api,
+  --   type = 'postman',
+  --   defaultApp = apps.default.postman,
+  --   screen = 1
+  -- },
   {
     icon = icons.chrome,
     type = 'chrome',

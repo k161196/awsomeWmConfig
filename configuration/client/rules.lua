@@ -44,5 +44,27 @@ awful.rules.rules = {
       end,
       skip_decoration = true
     }
-  }
+  },
+  {
+    rule_any = {name = {'YouTube'}},
+    -- type = { "normal", "dialog" },
+    properties = { 
+    placement = awful.placement.bottom_right,
+    -- focus = awful.client.focus.filter,
+    -- screen = awful.screen.preferred,
+    width = awful.screen.focused().workarea.width * 0.4,
+    height = awful.screen.focused().workarea.height * 0.4,
+    ontop = true,
+    floating = true,
+    drawBackdrop = true,
+    -- shape = function()
+    --   return function(cr, w, h)
+    --     gears.shape.rounded_rect(cr, w, h, 8)
+    --   end
+    -- end,
+    skip_decoration = true,
+    titlebars_enabled = false
+    -- switchtotag = true
+  }}
+  
 }
