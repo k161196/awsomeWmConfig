@@ -12,8 +12,8 @@ local icons = require('theme.icons')
 local battery_widget = require("battery-widget")
 
 local BAT0 = battery_widget {
-    ac = "ADP1",
-    adapter = "BAT0",
+    ac = "ACAD",
+    adapter = "BAT1",
     ac_prefix = "🔌",
     battery_prefix = "",
     percent_colors = {
@@ -119,7 +119,7 @@ local TopPanel = function(s)
     {
       ontop = true,
       screen = s,
-      height = dpi(32),
+      height = dpi(30),
       width = s.geometry.width,
       x = s.geometry.x,
       y = s.geometry.y,

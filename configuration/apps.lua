@@ -48,8 +48,12 @@ return {
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script
     '~/.config/awesome/configuration/awspawn', -- Spawn "dirty" apps that can linger between sessions
-    'xinput set-prop "SYNA32AD:00 06CB:CD50 Touchpad" "libinput Tapping Enabled" 1',
-    'xinput set-prop "SYNA32AD:00 06CB:CD50 Touchpad" "libinput Natural Scrolling Enabled" 1',
-    'xinput set-prop "SYNA32AD:00 06CB:CD50 Touchpad" "libinput Natural Scrolling Enabled" 1'
+    -- 'xinput set-prop "SYNA32AD:00 06CB:CD50 Touchpad" "libinput Tapping Enabled" 1',
+    -- 'xinput set-prop "SYNA32AD:00 06CB:CD50 Touchpad" "libinput Natural Scrolling Enabled" 1',
+    -- 'xinput set-prop "SYNA32AD:00 06CB:CD50 Touchpad" "libinput Natural Scrolling Enabled" 1',
+    'xinput set-prop "SYNA7DB5:01 06CB:7DB7 Touchpad" "libinput Tapping Enabled" 1',
+    'xinput set-prop "SYNA7DB5:01 06CB:7DB7 Touchpad" "libinput Natural Scrolling Enabled" 1',
+    'xinput set-prop "SYNA7DB5:01 06CB:7DB7 Touchpad" "libinput Natural Scrolling Enabled" 1'
+
   }
 }
