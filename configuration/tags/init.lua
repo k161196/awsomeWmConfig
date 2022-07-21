@@ -11,39 +11,52 @@ local tags = {
     screen = 1
   },
   {
-    icon = icons.code,
-    type = 'code',
-    defaultApp = apps.default.editor,
-    screen = 1
-  },
-    {
     icon = icons.terminal,
     type = 'terminal',
     defaultApp = apps.default.terminal,
     screen = 1
   },
+  {
+    icon = icons.code,
+    type = 'code',
+    defaultApp = apps.default.editor,
+    screen = 1
+  },
+  {
+    icon = icons.terminal,
+    type = 'terminal',
+    defaultApp = apps.default.terminal,
+    screen = 1
+  },
+
   -- {
   --   icon = icons.api,
   --   type = 'postman',
   --   defaultApp = apps.default.postman,
   --   screen = 1
   -- },
-  {
-    icon = icons.chrome,
-    type = 'chrome',
-    defaultApp = apps.default.chrome,
-    screen = 1
-  },
+  -- {
+  --   icon = icons.chrome,
+  --   type = 'chrome',
+  --   defaultApp = apps.default.chrome,
+  --   screen = 1
+  -- },
   {
     icon = icons.brave,
     type = 'brave',
     defaultApp = apps.default.browser,
     screen = 1
   },
-  {
-    icon = icons.social,
-    type = 'social',
-    defaultApp = apps.default.social,
+  -- {
+  --   icon = icons.social,
+  --   type = 'social',
+  --   defaultApp = apps.default.social,
+  --   screen = 1
+  -- },
+   {
+    icon = icons.api,
+    type = 'postman',
+    defaultApp = apps.default.postman,
     screen = 1
   },
   {
