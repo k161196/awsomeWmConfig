@@ -130,3 +130,54 @@ Finally, check the status of Bluetooth service using:
 sudo systemctl status bluetooth.service
 
 
+
+
+## Screen size 
+
+### /etc/X11/xorg.conf.d/10-monitor.conf
+
+```
+### /etc/X11/xorg.conf.d/10-monitor.conf
+Section "Monitor"
+### Monitor Identity - Typically HDMI-0 or DisplayPort-0
+    Identifier    "eDP-1"
+
+### Setting Resolution and Modes
+## Modeline is usually not required, but you can force resolution w>
+    #Option "PreferredMode" "1366x768"
+    #Option        "TargetRefresh" "60"
+
+### Positioning the Monitor
+## Basic
+    #Option "RightOf" "HDMI-1"
+## Advanced
+    #Option        "Position" "0 0"
+
+## Disable a Monitor
+
+    Option         "Disable" "true"
+EndSection
+
+
+Section "Monitor"
+### Monitor Identity - Typically HDMI-0 or DisplayPort-0
+    Identifier    "HDMI-1" 
+
+### Setting Resolution and Modes
+## Modeline is usually not required, but you can force resolution with it    
+    Modeline "1920x1080" 172.80 1920 2040 2248 2576 1080 1081 1084 1118
+    Option "PreferredMode" "1920x1080"
+    Option        "TargetRefresh" "60"
+
+### Positioning the Monitor
+## Basic
+    #Option "LeftOf" "eDP-1"    
+## Advanced
+    #Option        "Position" "1366 0"
+
+## Disable a Monitor
+EndSection 
+
+
+```
+
