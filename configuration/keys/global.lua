@@ -68,7 +68,8 @@ local globalKeys =
       awful.spawn('shutdown now')
     end,
     {description = 'Shutdown Computer', group = 'awesome'}
-  ),
+  )
+  ,
   awful.key(
     {modkey, 'Shift'},
     'l',
@@ -76,6 +77,14 @@ local globalKeys =
       _G.exit_screen_show()
     end,
     {description = 'Log Out Screen', group = 'awesome'}
+  ),
+  awful.key(
+    {modkey, 'Control'},
+    's',
+    function()
+      awful.spawn('systemctl suspend')
+    end,
+    {description = 'Sleep Computer', group = 'awesome'}
   ),
   awful.key({modkey}, 'u', awful.client.urgent.jumpto, {description = 'jump to urgent client', group = 'client'}),
   awful.key(
