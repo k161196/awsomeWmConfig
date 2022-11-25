@@ -77,6 +77,14 @@ local globalKeys =
     end,
     {description = 'Log Out Screen', group = 'awesome'}
   ),
+  awful.key(
+    {modkey, 'Control'},
+    's',
+    function()
+      awful.spawn('systemctl suspend')
+    end,
+    {description = 'Sleep Computer', group = 'awesome'}
+  ),
   awful.key({modkey}, 'u', awful.client.urgent.jumpto, {description = 'jump to urgent client', group = 'client'}),
   awful.key(
     {altkey},
@@ -163,7 +171,7 @@ local globalKeys =
   awful.key({modkey, 'Control'}, 'r', _G.awesome.restart, {description = 'reload awesome', group = 'awesome'}),
   awful.key({modkey, 'Control'}, 'q', _G.awesome.quit, {description = 'quit awesome', group = 'awesome'}),
   awful.key(
-    {altkey, 'Shift'},
+    {altkey, modkey},
     'Right',
     function()
       awful.tag.incmwfact(0.05)
@@ -171,7 +179,7 @@ local globalKeys =
     {description = 'Increase master width factor', group = 'layout'}
   ),
   awful.key(
-    {altkey, 'Shift'},
+    {altkey, modkey},
     'Left',
     function()
       awful.tag.incmwfact(-0.05)
@@ -179,7 +187,7 @@ local globalKeys =
     {description = 'Decrease master width factor', group = 'layout'}
   ),
   awful.key(
-    {altkey, 'Shift'},
+    {altkey, modkey},
     'Down',
     function()
       awful.client.incwfact(0.05)
@@ -187,7 +195,7 @@ local globalKeys =
     {description = 'Decrease master height factor', group = 'layout'}
   ),
   awful.key(
-    {altkey, 'Shift'},
+    {altkey, modkey},
     'Up',
     function()
       awful.client.incwfact(-0.05)
@@ -290,17 +298,17 @@ local globalKeys =
     {},
     'XF86MonBrightnessUp',
     function()
-      awful.spawn('xbacklight -inc 10')
+      awful.spawn('brightnessctl +2')
     end,
-    {description = '+10%', group = 'hotkeys'}
+    {description = '+2', group = 'hotkeys'}
   ),
   awful.key(
     {},
     'XF86MonBrightnessDown',
     function()
-      awful.spawn('xbacklight -dec 10')
+      awful.spawn('brightnessctl -2')
     end,
-    {description = '-10%', group = 'hotkeys'}
+    {description = '-2', group = 'hotkeys'}
   ),
   -- ALSA volume control
   awful.key(
@@ -391,13 +399,13 @@ local globalKeys =
     end
   ),
   -- System Monitor hotkey
-  awful.key(
-    {modkey},
-    'm',
-    function()
-      awful.util.spawn_with_shell('mate-system-monitor')
-    end
-  ),
+  -- awful.key(
+  --   {modkey},
+  --   'm',
+  --   function()
+  --     awful.util.spawn_with_shell('mate-system-monitor')
+  --   end
+  -- ),
   -- Kill VLC
   awful.key(
     {modkey},

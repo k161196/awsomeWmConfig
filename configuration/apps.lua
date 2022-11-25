@@ -8,7 +8,7 @@ local rofi_command = 'env /usr/bin/rofi -dpi ' .. get_dpi() .. ' -width ' .. wit
 return {
   -- List of apps to start by default on some actions
   default = {
-    terminal = 'terminator',
+    terminal = 'gnome-terminal',
     rofi = rofi_command,
     lock = 'i3lock-fancy',
     quake = 'terminator',
@@ -16,11 +16,14 @@ return {
     region_screenshot = 'flameshot gui -p ~/Pictures',
     delayed_screenshot = 'flameshot screen -p ~/Pictures -d 5000',
     browser = 'brave-browser',
-    editor = 'gedit', -- gui text editor
-    social = 'discord',
+    editor = 'code', -- gui text editor
+    social = 'slack',
     game = rofi_command,
     files = 'nautilus',
-    music = rofi_command 
+    music = rofi_command,
+    postman = 'gtk-launch brave-mfmknabcbemhbjkdppkoclnbiogmkllh-Default.desktop',
+    notion = 'gtk-launch brave-momfioececahhohbolddgklgdgacbedf-Default.desktop',
+    youtube = 'gtk-launch brave-agimnkijcaahngcdmfeangaknmldooml-Profile_1.desktop',
   },
   -- List of apps to start once on start-up
   run_on_start_up = {
@@ -38,6 +41,9 @@ return {
     '/usr/bin/variety',
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script
-    '~/.config/awesome/configuration/awspawn' -- Spawn "dirty" apps that can linger between sessions
+    '~/.config/awesome/configuration/awspawn', -- Spawn "dirty" apps that can linger between sessions
+    'xinput set-prop "SYNA7DB5:01 06CB:7DB7 Touchpad" "libinput Tapping Enabled" 1',
+    'xinput set-prop "SYNA7DB5:01 06CB:7DB7 Touchpad" "libinput Natural Scrolling Enabled" 1',
+    'xinput set-prop "SYNA7DB5:01 06CB:7DB7 Touchpad" "libinput Natural Scrolling Enabled" 1'
   }
 }
