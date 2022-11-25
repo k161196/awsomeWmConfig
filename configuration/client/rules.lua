@@ -3,6 +3,7 @@ local gears = require('gears')
 local client_keys = require('configuration.client.keys')
 local client_buttons = require('configuration.client.buttons')
 
+
 -- Rules
 awful.rules.rules = {
   -- All clients will match this rule.
@@ -44,5 +45,9 @@ awful.rules.rules = {
       end,
       skip_decoration = true
     }
-  }
+  },
+  -- Add title bars to normal clients and dialogs
+{ rule_any = {type = { "normal", "dialog" }
+}, properties = { titlebars_enabled = false }
+}
 }

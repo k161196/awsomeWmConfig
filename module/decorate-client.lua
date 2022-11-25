@@ -82,9 +82,9 @@ function tagCallback(tag)
   end
 end
 
-_G.client.connect_signal('manage', clientCallback)
+-- _G.client.connect_signal('manage', clientCallback)
 
-_G.client.connect_signal('unmanage', clientCallback)
+-- _G.client.connect_signal('unmanage', clientCallback)
 
 _G.client.connect_signal('property::hidden', clientCallback)
 
@@ -101,6 +101,6 @@ _G.client.connect_signal(
   end
 )
 
-_G.tag.connect_signal('property::selected', tagCallback)
+-- _G.tag.connect_signal('property::selected', tagCallback)
 
-_G.tag.connect_signal('property::layout', tagCallback)
+-- _G.tag.connect_signal('property::layout', tagCallback)

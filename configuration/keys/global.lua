@@ -1,6 +1,9 @@
 local awful = require('awful')
 require('awful.autofocus')
 local beautiful = require('beautiful')
+local xrandr = require("xrandr")
+
+
 local hotkeys_popup = require('awful.hotkeys_popup').widget
 
 local modkey = require('configuration.keys.mod').modKey
@@ -491,7 +494,9 @@ for i = 1, 9 do
         end
       end,
       descr_toggle_focus
-    )
+    ),
+    awful.key({modkey}, 'l', function() xrandr.xrandr() end)
+
   )
 end
 
