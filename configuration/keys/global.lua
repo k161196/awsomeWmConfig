@@ -3,6 +3,8 @@ local gears = require('gears')
 require('awful.autofocus')
 local beautiful = require('beautiful')
 local hotkeys_popup = require('awful.hotkeys_popup').widget
+local xrandr = require("xrandr")
+
 
 local modkey = require('configuration.keys.mod').modKey
 local altkey = require('configuration.keys.mod').altKey
@@ -546,7 +548,10 @@ for i = 1, 9 do
         end
       end,
       descr_toggle_focus
-    )
+    ),
+
+    awful.key({modkey}, 'l', function() xrandr.xrandr() end)
+
   )
 end
 

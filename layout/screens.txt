@@ -1,0 +1,39 @@
+xrandr --output eDP-1 --mode 1366x768  --primary --output  HDMI-1 --right-of eDP-1 --mode 1920x1080
+
+
+
+Screen 0: minimum 320 x 200, current 1366 x 768, maximum 16384 x 16384
+eDP-1 connected primary 1366x768+0+0 (normal left inverted right x axis y axis) 344mm x 194mm
+
+
+xrandr --output eDP-1 --mode 1366x768
+
+
+
+xrandr --output DP-1 --auto --scale 2x2 --pos 3840x0 --fb 6000x3840 --right-of eDP-1 --rotate left --output  eDP-1 --auto --scale 1x1 --pos    0x0 --primary
+
+
+xrandr --output eDP-1 --auto --scale 2x2 --pos 768x0 --fb 1366x768 --right-of eDP-1 --output  HDMI-1 --auto --scale 1x1 --pos 0x0 --primary --right-of eDP-1
+
+
+
+
+
+Screen 0: minimum 320 x 200, current 3286 x 1080, maximum 16384 x 16384
+eDP-1 connected 1366x768+1920+0 (normal left inverted right x axis y axis) 344mm x 194mm
+
+HDMI-1 connected primary 1920x1080+0+0 (normal left inverted right x axis y axis) 527mm x 296mm
+
+
+cvt 1366 768 60
+# 1368x768 59.88 Hz (CVT) hsync: 47.79 kHz; pclk: 85.25 MHz
+Modeline "1368x768_60.00"   85.25  1368 1440 1576 1784  768 771 781 798 -hsync +vsync
+
+xrandr --newmode "1368x768_60.00"   85.25  1368 1440 1576 1784  768 771 781 798 -hsync +vsync
+
+xrandr --addmode eDP-1 "1368x768_60.00" 
+
+xrandr --output eDP-1 --mode "1368x768_60.00" 
+
+
+xrandr --fb 3286x1080 --output eDP-1 --mode 1366x768 --pos 0x0 --panning 1366x768  --output HDMI-1 --mode 1920x1080 --pos 1366x0 --panning 1920x1080
