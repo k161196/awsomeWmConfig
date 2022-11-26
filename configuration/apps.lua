@@ -21,6 +21,7 @@ return {
     game = rofi_command,
     files = 'nautilus',
     music = rofi_command,
+    settings = 'gnome-control-center', -- gui text editor
     postman = 'gtk-launch brave-mfmknabcbemhbjkdppkoclnbiogmkllh-Default.desktop',
     notion = 'gtk-launch brave-momfioececahhohbolddgklgdgacbedf-Default.desktop',
     youtube = 'gtk-launch brave-agimnkijcaahngcdmfeangaknmldooml-Profile_1.desktop',
