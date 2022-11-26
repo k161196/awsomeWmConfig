@@ -36,7 +36,7 @@ _G.client.connect_signal(
     -- Set the windows at the slave,
     -- i.e. put it at the end of others instead of setting it master.
     if not _G.awesome.startup then
-      -- awful.client.setslave(c)
+      awful.client.setslave(c)
     end
 
     if _G.awesome.startup and not c.size_hints.user_position and not c.size_hints.program_position then
