@@ -16,6 +16,7 @@ return {
     region_screenshot = 'flameshot gui -p ~/Pictures',
     delayed_screenshot = 'flameshot screen -p ~/Pictures -d 5000',
     browser = 'brave-browser',
+    devBrowser = 'flatpak run io.gitlab.librewolf-community',
     editor = 'code', -- gui text editor
     social = 'slack',
     game = rofi_command,

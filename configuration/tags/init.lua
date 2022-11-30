@@ -23,9 +23,9 @@ local tags = {
     screen = 1
   },
   {
-    icon = icons.terminal,
-    type = 'terminal',
-    defaultApp = apps.default.terminal,
+    icon = icons.libreWolf,
+    type = 'libreWolf',
+    defaultApp = apps.default.devBrowser,
     screen = 1
   },
   {
