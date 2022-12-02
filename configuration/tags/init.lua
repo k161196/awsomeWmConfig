@@ -16,16 +16,17 @@ local tags = {
     defaultApp = apps.default.terminal,
     screen = 1
   },
-  {
-    icon = icons.code,
-    type = 'code',
-    defaultApp = apps.default.editor,
-    screen = 1
-  },
+ 
   {
     icon = icons.libreWolf,
     type = 'libreWolf',
     defaultApp = apps.default.devBrowser,
+    screen = 1
+  },
+  {
+    icon = icons.api,
+    type = 'postman',
+    defaultApp = apps.default.postman,
     screen = 1
   },
   {
@@ -35,16 +36,17 @@ local tags = {
     screen = 1
   },
 
-   {
-    icon = icons.api,
-    type = 'postman',
-    defaultApp = apps.default.postman,
+
+  {
+    icon = icons.social,
+    type = 'slack',
+    defaultApp = apps.default.slack,
     screen = 1
   },
   {
-    icon = icons.notion,
-    type = 'notion',
-    defaultApp = apps.default.notion,
+    icon = icons.code,
+    type = 'code',
+    defaultApp = apps.default.editor,
     screen = 1
   }
 }

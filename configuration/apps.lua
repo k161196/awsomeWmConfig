@@ -23,7 +23,8 @@ return {
     files = 'nautilus',
     music = rofi_command,
     settings = 'gnome-control-center', -- gui text editor
-    postman = 'gtk-launch brave-mfmknabcbemhbjkdppkoclnbiogmkllh-Default.desktop',
+    -- postman = 'gtk-launch brave-mfmknabcbemhbjkdppkoclnbiogmkllh-Default.desktop',
+    postman = 'postman',
     notion = 'gtk-launch brave-momfioececahhohbolddgklgdgacbedf-Default.desktop',
     youtube = 'gtk-launch brave-agimnkijcaahngcdmfeangaknmldooml-Profile_1.desktop',
   },
