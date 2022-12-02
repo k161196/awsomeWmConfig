@@ -16,23 +16,24 @@ local tags = {
     defaultApp = apps.default.terminal,
     screen = 1
   },
- 
   {
-    icon = icons.libreWolf,
-    type = 'libreWolf',
-    defaultApp = apps.default.devBrowser,
+    icon = icons.brave,
+    type = 'brave',
+    defaultApp = apps.default.browser,
     screen = 1
   },
+
   {
     icon = icons.api,
     type = 'postman',
     defaultApp = apps.default.postman,
     screen = 1
   },
+  
   {
-    icon = icons.brave,
-    type = 'brave',
-    defaultApp = apps.default.browser,
+    icon = icons.libreWolf,
+    type = 'libreWolf',
+    defaultApp = apps.default.devBrowser,
     screen = 1
   },
 
