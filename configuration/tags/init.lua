@@ -15,13 +15,13 @@ local tags = {
     type = 'terminal',
     defaultApp = apps.default.terminal,
     screen = 1
-  },
-  {
-    icon = icons.brave,
-    type = 'brave',
-    defaultApp = apps.default.browser,
+  },{
+    icon = icons.terminal,
+    type = 'terminal',
+    defaultApp = apps.default.terminal,
     screen = 1
   },
+  
 
   {
     icon = icons.api,
@@ -31,9 +31,9 @@ local tags = {
   },
   
   {
-    icon = icons.libreWolf,
-    type = 'libreWolf',
-    defaultApp = apps.default.devBrowser,
+    icon = icons.chrome,
+    type = 'chrome',
+    defaultApp = apps.default.chromium,
     screen = 1
   },
 
