@@ -28,7 +28,8 @@ return {
     slack = 'slack',
     notion = 'gtk-launch brave-momfioececahhohbolddgklgdgacbedf-Default.desktop',
     youtube = 'gtk-launch brave-agimnkijcaahngcdmfeangaknmldooml-Profile_1.desktop',
-    chromium ="chromium-browser"
+    chromium ="chromium-browser",
+    chrome="google-chrome"
   },
   -- List of apps to start once on start-up
   run_on_start_up = {

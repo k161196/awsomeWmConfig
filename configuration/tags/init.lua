@@ -15,12 +15,15 @@ local tags = {
     type = 'terminal',
     defaultApp = apps.default.terminal,
     screen = 1
-  },{
-    icon = icons.terminal,
-    type = 'terminal',
-    defaultApp = apps.default.terminal,
+  },
+  {
+    icon = icons.social,
+    type = 'slack',
+    defaultApp = apps.default.slack,
     screen = 1
   },
+  
+  
   
 
   {
@@ -33,21 +36,22 @@ local tags = {
   {
     icon = icons.chrome,
     type = 'chrome',
-    defaultApp = apps.default.chromium,
+    defaultApp = apps.default.chrome,
     screen = 1
   },
 
 
-  {
-    icon = icons.social,
-    type = 'slack',
-    defaultApp = apps.default.slack,
-    screen = 1
-  },
+  
   {
     icon = icons.code,
     type = 'code',
     defaultApp = apps.default.editor,
+    screen = 1
+  },
+  {
+    icon = icons.terminal,
+    type = 'terminal',
+    defaultApp = apps.default.terminal,
     screen = 1
   }
 }
