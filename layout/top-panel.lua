@@ -49,11 +49,13 @@ local month_calendar = awful.widget.calendar_popup.month({
   start_sunday = false,
   week_numbers = true
 })
+
 month_calendar:attach(textclock)
 
 local clock_widget = wibox.container.margin(textclock, dpi(13), dpi(13), dpi(9), dpi(8))
 
 local add_button = mat_icon_button(mat_icon(icons.plus, dpi(24)))
+
 add_button:buttons(
   gears.table.join(
     awful.button(
