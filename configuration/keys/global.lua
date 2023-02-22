@@ -41,7 +41,8 @@ local globalKeys =
     {modkey},
     'r',
     function()
-      awful.spawn('rofi -combi-modi window,drun -show combi -modi combi')
+      awful.spawn(apps.default.rofi)
+      -- awful.spawn('rofi -combi-modi window,drun -show combi -modi combi')
     end,
     {description = 'Main menu', group = 'awesome'}
   ),
@@ -81,7 +82,10 @@ local globalKeys =
     {modkey, 'Control'},
     's',
     function()
-      awful.spawn('systemctl suspend')
+      awful.spawn.with_shell(apps.default.lock .. ' & systemctl suspend')
+
+      -- awful.spawn('systemctl suspend')
+      -- awful.spawn(apps.default.lock)
     end,
     {description = 'Sleep Computer', group = 'awesome'}
   ),
@@ -511,7 +515,7 @@ for i = 1, 9 do
       end,
       descr_toggle_focus
     ),
-    awful.key({modkey}, 'l', function() xrandr.xrandr() end)
+    awful.key({modkey}, 'k', function() xrandr.xrandr() end)
 
   )
 end
