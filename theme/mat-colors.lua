@@ -310,6 +310,7 @@ return {
     hue_800 = '#37474F',
     hue_900 = '#263238'
   },
+  
   -- Black
   black = '#000000',
   -- White
