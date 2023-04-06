@@ -44,7 +44,7 @@ return {
      'flameshot',
      'synology-drive -minimized',
      'steam -silent',
-    'feh --randomize --bg-fill ~/.wallpapers/*',
+    -- 'feh --randomize --bg-fill ~/.wallpapers/*',
     '/usr/bin/variety',
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script

@@ -515,7 +515,8 @@ for i = 1, 9 do
       end,
       descr_toggle_focus
     ),
-    awful.key({modkey}, 'k', function() xrandr.xrandr() end)
+    awful.key({modkey}, 'k', function() xrandr.xrandr() end),
+    awful.key({modkey}, 'j', function() awful.spawn('xrandr --output eDP-1 --auto --output HDMI-1 --off') end)
 
   )
 end

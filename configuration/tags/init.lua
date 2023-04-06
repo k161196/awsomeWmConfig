@@ -89,7 +89,7 @@ _G.tag.connect_signal(
     if (currentLayout == awful.layout.suit.max) then
       t.gap = 0
     else
-      t.gap = 4
+      t.gap = 2
     end
   end
 )
