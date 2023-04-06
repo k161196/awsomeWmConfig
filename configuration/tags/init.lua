@@ -4,12 +4,7 @@ local icons = require('theme.icons')
 local apps = require('configuration.apps')
 
 local tags = {
-  {
-    icon = icons.attachment,
-    type = 'manage',
-    defaultApp = apps.default.logseq,
-    screen = 1
-  },
+
   {
     icon = icons.code,
     type = 'code',
@@ -28,7 +23,12 @@ local tags = {
     defaultApp = apps.default.slack,
     screen = 1
   },
-  
+  {
+    icon = icons.api,
+    type = 'postman',
+    defaultApp = apps.default.postman,
+    screen = 1
+  },
   
   {
     icon = icons.chrome,
@@ -37,10 +37,12 @@ local tags = {
     screen = 1
   },
 
+ 
+
   {
-    icon = icons.api,
-    type = 'postman',
-    defaultApp = apps.default.postman,
+    icon = icons.attachment,
+    type = 'manage',
+    defaultApp = apps.default.logseq,
     screen = 1
   },
   
@@ -49,9 +51,9 @@ local tags = {
 
   
   {
-    icon = icons.code,
-    type = 'code',
-    defaultApp = apps.default.editor,
+    icon = icons.notion,
+    type = 'notion',
+    defaultApp = apps.default.notion,
     screen = 1
   },
   {

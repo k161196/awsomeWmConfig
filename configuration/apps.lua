@@ -26,8 +26,9 @@ return {
     settings = 'gnome-control-center', -- gui text editor
     -- postman = 'gtk-launch brave-mfmknabcbemhbjkdppkoclnbiogmkllh-Default.desktop',
     postman = 'postman',
-    slack = 'slack',
-    notion = 'gtk-launch brave-momfioececahhohbolddgklgdgacbedf-Default.desktop',
+    slack = 'gtk-launch slack.desktop',
+    -- notion = 'gtk-launch brave-momfioececahhohbolddgklgdgacbedf-Default.desktop',
+    notion = 'gtk-launch notion.desktop',
     youtube = 'gtk-launch brave-agimnkijcaahngcdmfeangaknmldooml-Profile_1.desktop',
     chromium ="chromium-browser",
     chrome="google-chrome",
@@ -42,9 +43,9 @@ return {
     'numlockx on', -- enable numlock
     '/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
     'xfce4-power-manager', -- Power manager
-     'flameshot',
-     'synology-drive -minimized',
-     'steam -silent',
+    --  'flameshot',
+    --  'synology-drive -minimized',
+    --  'steam -silent',
     -- 'feh --randomize --bg-fill ~/.wallpapers/*',
     '/usr/bin/variety',
     -- Add applications that need to be killed between reloads
