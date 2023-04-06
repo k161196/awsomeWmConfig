@@ -30,7 +30,8 @@ return {
     notion = 'gtk-launch brave-momfioececahhohbolddgklgdgacbedf-Default.desktop',
     youtube = 'gtk-launch brave-agimnkijcaahngcdmfeangaknmldooml-Profile_1.desktop',
     chromium ="chromium-browser",
-    chrome="google-chrome"
+    chrome="google-chrome",
+    logseq="flatpak run com.logseq.Logseq"
   },
   -- List of apps to start once on start-up
   run_on_start_up = {

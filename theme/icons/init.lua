@@ -29,5 +29,8 @@ return {
   chrome = dir .. '/google-chrome.svg',
   api = dir .. '/api.svg',
   notion = dir .. '/notion.svg',
-  libreWolf = dir .. '/wolf.png'
+  libreWolf = dir .. '/wolf.png',
+  notes = dir .. '/notes.svg',
+  dashboard = dir .. '/dashboard.svg',
+  attachment = dir .. '/attachment.svg'
 }

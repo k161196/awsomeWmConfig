@@ -5,6 +5,12 @@ local apps = require('configuration.apps')
 
 local tags = {
   {
+    icon = icons.attachment,
+    type = 'manage',
+    defaultApp = apps.default.logseq,
+    screen = 1
+  },
+  {
     icon = icons.code,
     type = 'code',
     defaultApp = apps.default.editor,
@@ -24,7 +30,12 @@ local tags = {
   },
   
   
-  
+  {
+    icon = icons.chrome,
+    type = 'chrome',
+    defaultApp = apps.default.chrome,
+    screen = 1
+  },
 
   {
     icon = icons.api,
@@ -33,12 +44,7 @@ local tags = {
     screen = 1
   },
   
-  {
-    icon = icons.chrome,
-    type = 'chrome',
-    defaultApp = apps.default.chrome,
-    screen = 1
-  },
+  
 
 
   
