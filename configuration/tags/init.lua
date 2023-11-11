@@ -59,7 +59,7 @@ local tags = {
   {
     icon = icons.terminal,
     type = 'terminal',
-    defaultApp = apps.default.terminal,
+    defaultApp = apps.default.notion,
     screen = 1
   }
 }
