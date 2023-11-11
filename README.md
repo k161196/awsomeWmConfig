@@ -19,7 +19,7 @@ An almost desktop environment made with [AwesomeWM](https://awesomewm.org/) foll
 #### Debian-Based
 
 ```
-sudo apt install awesome fonts-roboto rofi compton i3lock xclip qt5-style-plugins materia-gtk-theme lxappearance xbacklight flameshot nautilus xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome -y
+sudo apt install awesome fonts-roboto rofi compton i3lock xclip qt5-style-plugins materia-gtk-theme lxappearance xbacklight flameshot nautilus xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome i3lock-fancy -y
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 ```
 

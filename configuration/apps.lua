@@ -23,7 +23,8 @@ return {
     game = rofi_command,
     files = 'nautilus',
     music = rofi_command,
-    settings = 'gnome-control-center', -- gui text editor
+    -- settings = 'gnome-control-center', -- gui text editor
+    settings = 'env XDG_CURRENT_DESKTOP=GNOME gnome-control-center', -- gui text editor
     -- postman = 'gtk-launch brave-mfmknabcbemhbjkdppkoclnbiogmkllh-Default.desktop',
     postman = 'postman',
     slack = 'gtk-launch slack.desktop',
