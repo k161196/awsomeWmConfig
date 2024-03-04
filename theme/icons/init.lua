@@ -2,6 +2,7 @@ local dir = os.getenv('HOME') .. '/.config/awesome/theme/icons'
 
 return {
   --tags
+  brain = dir .. '/brain.svg',
   brave = dir .. '/brave.svg',
   code = dir .. '/code-braces.svg',
   social = dir .. '/forum.svg',

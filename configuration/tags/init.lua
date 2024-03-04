@@ -4,7 +4,12 @@ local icons = require('theme.icons')
 local apps = require('configuration.apps')
 
 local tags = {
-
+  {
+    icon = icons.brain,
+    type = 'brain',
+    defaultApp = apps.default.logseq,
+    screen = 1
+  },
   {
     icon = icons.code,
     type = 'code',
@@ -33,18 +38,13 @@ local tags = {
   {
     icon = icons.chrome,
     type = 'chrome',
-    defaultApp = apps.default.chrome,
+    defaultApp = apps.default.browser,
     screen = 1
   },
 
  
 
-  {
-    icon = icons.attachment,
-    type = 'manage',
-    defaultApp = apps.default.logseq,
-    screen = 1
-  },
+ 
   
   
 

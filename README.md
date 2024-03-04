@@ -96,3 +96,10 @@ The project is split in functional directories and in each of them there is a re
 * [Module](./module) contain all the **features** available
 * [Theme](./theme) hold all the **aesthetic** aspects
 * [Widget](./widget) contain all the **widgets** available
+
+
+```
+sudo nano ~/.bash_aliases
+alias reduceBrightness="xrandr --output HDMI-1 --brightness 0.5"
+alias reduceBrightness1="xrandr --output HDMI-1 --brightness 1"
+```

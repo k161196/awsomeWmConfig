@@ -310,7 +310,8 @@ local globalKeys =
     {},
     'XF86MonBrightnessUp',
     function()
-      awful.spawn('brightnessctl +2')
+      -- awful.util.spawn(apps.default.files)
+      awful.spawn('brightnessctl set 100%')
     end,
     {description = '+2', group = 'hotkeys'}
   ),
@@ -318,7 +319,7 @@ local globalKeys =
     {},
     'XF86MonBrightnessDown',
     function()
-      awful.spawn('brightnessctl -2')
+      awful.spawn('brightnessctl set 50%')
     end,
     {description = '-2', group = 'hotkeys'}
   ),
@@ -434,16 +435,25 @@ local globalKeys =
       awful.util.spawn(apps.default.files)
     end,
     {description = 'filebrowser', group = 'hotkeys'}
-  ),
-  -- Emoji Picker
-  awful.key(
-    {modkey},
-    'a',
-    function()
-      awful.util.spawn_with_shell('ibus emoji')
-    end,
-    {description = 'Open the ibus emoji picker to copy an emoji to your clipboard', group = 'hotkeys'}
   )
+  -- Emoji Picker
+  -- ,
+  -- awful.key(
+  --   {modkey},
+  --   'a',
+  --   function()
+  --     awful.util.spawn_with_shell('ibus emoji')
+  --   end,
+  --   {description = 'Open the ibus emoji picker to copy an emoji to your clipboard', group = 'hotkeys'}
+  -- )
+  -- awful.key(
+  --   {modkey},
+  --   'a',
+  --   function()
+  --     awful.util.spawn_with_shell('date | xclip -sel clip && xclip -o')
+  --   end,
+  --   {description = 'Open the ibus emoji picker to copy an emoji to your clipboard', group = 'hotkeys'}
+  -- )
 )
 
 -- Bind all key numbers to tags.
