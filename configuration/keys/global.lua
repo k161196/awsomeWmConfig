@@ -123,6 +123,15 @@ local globalKeys =
     end,
     {description = 'Lock the screen', group = 'awesome'}
   ),
+  -- awful.key(
+  --   {modkey,'Control'},
+  --   'l',
+  --   function()
+  --     awful.util.spawn("sync")
+  --     awful.util.spawn("xautolock -locknow")
+  --   end,
+  --   {description = 'Lock the screen', group = 'awesome'}
+  -- ),
   awful.key(
     {modkey},
     'Print',

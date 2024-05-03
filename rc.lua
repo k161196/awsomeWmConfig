@@ -6,6 +6,7 @@ local naughty = require("naughty")
 
 local beautiful = require('beautiful')
 
+
 -- Theme
 beautiful.init(require('theme'))
 
@@ -109,4 +110,8 @@ _G.client.connect_signal(
     c.border_color = beautiful.border_normal
   end
 )
+
+
+-- awful.util.spawn_with_shell('~/.config/awesome/locker')
+
 

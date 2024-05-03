@@ -30,6 +30,10 @@ yay -S awesome rofi picom i3lock-fancy xclip ttf-roboto polkit-gnome materia-the
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 ```
 
+```
+sudo snap install alacritty --classic
+```
+
 #### Program list
 
 - [AwesomeWM](https://awesomewm.org/) as the window manager - universal package install: awesome
