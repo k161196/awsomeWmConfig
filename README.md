@@ -276,3 +276,24 @@ terminal changes
 ```
 starship 
 ```
+
+```
+install nala 
+```
+
+```
+lazygit 
+```
+
+```
+falkon browser
+```
+
+```
+dbever-ce
+```
+
+```
+https://github.com/TheAssassin/AppImageLauncher/releases/tag/v2.2.0
+https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-lite-2.2.0-travis995-0f91801-i386.AppImage
+```
