@@ -56,12 +56,12 @@ sudo snap install alacritty --classic
 
 Arch-Based Installs
 ```
-git clone https://github.com/ChrisTitusTech/titus-awesome ~/.config/awesome
+git clone https://github.com/k161196/awsomeWmConfig.git ~/.config/awesome
 ```
 
 Debian-Based Installs
 ```
-git clone --branch debian https://github.com/ChrisTitusTech/titus-awesome ~/.config/awesome
+git clone --branch main https://github.com/k161196/awsomeWmConfig.git ~/.config/awesome
 ```
 
 ### 3) Set the themes
@@ -89,7 +89,13 @@ QT_QPA_PLATFORMTHEME=gtk2
 
 The first variable fixes most indicators (especially electron based ones!), the second tells Qt and KDE applications to use your gtk2 theme set through lxappearance.
 
-### 5) Read the documentation
+
+### 5) xinput 
+    ```
+    xinput list
+    ```
+    select Touchpad replace in app.lua
+### 6) Read the documentation
 
 The documentation live within the source code.
 
@@ -100,6 +106,164 @@ The project is split in functional directories and in each of them there is a re
 * [Module](./module) contain all the **features** available
 * [Theme](./theme) hold all the **aesthetic** aspects
 * [Widget](./widget) contain all the **widgets** available
+
+
+clone https://github.com/natnat-mc/brightnessctl.git
+make
+sudo make install
+
+
+sudo apt install blueman
+
+To start the Bluetooth service, run this command:
+
+sudo systemctl start bluetooth.service
+To make it persistent after reboot, use this command:
+
+sudo systemctl enable bluetooth.service
+Finally, check the status of Bluetooth service using:
+
+sudo systemctl status bluetooth.service
+
+
+
+
+## Screen size 
+
+### /etc/X11/xorg.conf.d/10-monitor.conf
+
+```
+### /etc/X11/xorg.conf.d/10-monitor.conf
+Section "Monitor"
+### Monitor Identity - Typically HDMI-0 or DisplayPort-0
+    Identifier    "eDP-1"
+
+### Setting Resolution and Modes
+## Modeline is usually not required, but you can force resolution w>
+    #Option "PreferredMode" "1366x768"
+    #Option        "TargetRefresh" "60"
+
+### Positioning the Monitor
+## Basic
+    #Option "RightOf" "HDMI-1"
+## Advanced
+    #Option        "Position" "0 0"
+
+## Disable a Monitor
+
+    Option         "Disable" "true"
+EndSection
+
+
+Section "Monitor"
+### Monitor Identity - Typically HDMI-0 or DisplayPort-0
+    Identifier    "HDMI-1" 
+
+### Setting Resolution and Modes
+## Modeline is usually not required, but you can force resolution with it    
+    Modeline "1920x1080" 172.80 1920 2040 2248 2576 1080 1081 1084 1118
+    Option "PreferredMode" "1920x1080"
+    Option        "TargetRefresh" "60"
+
+### Positioning the Monitor
+## Basic
+    #Option "LeftOf" "eDP-1"    
+## Advanced
+    #Option        "Position" "1366 0"
+
+## Disable a Monitor
+EndSection 
+
+
+```
+
+
+
+clone https://github.com/natnat-mc/brightnessctl.git
+make
+sudo make install
+
+
+sudo apt install blueman
+
+To start the Bluetooth service, run this command:
+
+sudo systemctl start bluetooth.service
+To make it persistent after reboot, use this command:
+
+sudo systemctl enable bluetooth.service
+Finally, check the status of Bluetooth service using:
+
+sudo systemctl status bluetooth.service
+
+
+
+
+## Screen size 
+
+### /etc/X11/xorg.conf.d/10-monitor.conf
+
+```
+### /etc/X11/xorg.conf.d/10-monitor.conf
+Section "Monitor"
+### Monitor Identity - Typically HDMI-0 or DisplayPort-0
+    Identifier    "eDP-1"
+
+### Setting Resolution and Modes
+## Modeline is usually not required, but you can force resolution w>
+    #Option "PreferredMode" "1366x768"
+    #Option        "TargetRefresh" "60"
+
+### Positioning the Monitor
+## Basic
+    #Option "RightOf" "HDMI-1"
+## Advanced
+    #Option        "Position" "0 0"
+
+## Disable a Monitor
+
+    Option         "Disable" "true"
+EndSection
+
+
+Section "Monitor"
+### Monitor Identity - Typically HDMI-0 or DisplayPort-0
+    Identifier    "HDMI-1" 
+
+### Setting Resolution and Modes
+## Modeline is usually not required, but you can force resolution with it    
+    Modeline "1920x1080" 172.80 1920 2040 2248 2576 1080 1081 1084 1118
+    Option "PreferredMode" "1920x1080"
+    Option        "TargetRefresh" "60"
+
+### Positioning the Monitor
+## Basic
+    #Option "LeftOf" "eDP-1"    
+## Advanced
+    #Option        "Position" "1366 0"
+
+## Disable a Monitor
+EndSection 
+
+
+```
+
+
+
+```
+sudo nano ~/.bash_aliases
+alias reduceBrightness="xrandr --output HDMI-1 --brightness 0.5"
+alias reduceBrightness1="xrandr --output HDMI-1 --brightness 1"
+```
+
+terminal changes
+```
+starship 
+```
+
+```
+
+```
 
 
 ```

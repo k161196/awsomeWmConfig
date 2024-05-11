@@ -1,14 +1,18 @@
 local awful = require('awful')
+local gears = require('gears')
 require('awful.autofocus')
 local beautiful = require('beautiful')
 local xrandr = require("xrandr")
 
 
 local hotkeys_popup = require('awful.hotkeys_popup').widget
+local xrandr = require("xrandr")
+
 
 local modkey = require('configuration.keys.mod').modKey
 local altkey = require('configuration.keys.mod').altKey
 local apps = require('configuration.apps')
+local double_tap_timer = nil
 -- Key bindings
 local globalKeys =
   awful.util.table.join(
@@ -69,7 +73,8 @@ local globalKeys =
       awful.spawn('shutdown now')
     end,
     {description = 'Shutdown Computer', group = 'awesome'}
-  ),
+  )
+  ,
   awful.key(
     {modkey, 'Shift'},
     'l',
@@ -172,6 +177,7 @@ local globalKeys =
     end,
     {description = 'Open a browser', group = 'launcher'}
   ),
+
   -- Standard program
   awful.key(
     {modkey},
@@ -207,6 +213,38 @@ local globalKeys =
     end,
     {description = 'Decrease master width factor', group = 'layout'}
   ),
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Right',
+  --   function()
+  --     awful.tag.incmwfact(0.05)
+  --   end,
+  --   {description = 'Increase master width factor', group = 'layout'}
+  -- ),
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Left',
+  --   function()
+  --     awful.tag.incmwfact(-0.05)
+  --   end,
+  --   {description = 'Decrease master width factor', group = 'layout'}
+  -- ),
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Down',
+  --   function()
+  --     awful.client.incwfact(0.05)
+  --   end,
+  --   {description = 'Decrease master height factor', group = 'layout'}
+  -- ),
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Up',
+  --   function()
+  --     awful.client.incwfact(-0.05)
+  --   end,
+  --   {description = 'Increase master height factor', group = 'layout'}
+  -- ),
   awful.key(
     {altkey, modkey},
     'Down',

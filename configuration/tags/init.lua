@@ -28,6 +28,19 @@ local tags = {
     defaultApp = apps.default.slack,
     screen = 1
   },
+
+  -- {
+  --   icon = icons.api,
+  --   type = 'postman',
+  --   defaultApp = apps.default.postman,
+  --   screen = 1
+  -- },
+  -- {
+  --   icon = icons.chrome,
+  --   type = 'chrome',
+  --   defaultApp = apps.default.chrome,
+  --   screen = 1
+  -- },
   {
     icon = icons.api,
     type = 'postman',
@@ -51,6 +64,9 @@ local tags = {
 
   
   {
+    icon = icons.notion,
+    type = 'notion',
+    defaultApp = apps.default.notion,
     icon = icons.notion,
     type = 'notion',
     defaultApp = apps.default.notion,

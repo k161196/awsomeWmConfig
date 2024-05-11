@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=notepad.pw / SlashDev | The napkin of the internet.
+Exec=/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=hfodicpgkjfadgmjdepcaojmeppjikgn
+Icon=brave-hfodicpgkjfadgmjdepcaojmeppjikgn-Default
+StartupWMClass=crx_hfodicpgkjfadgmjdepcaojmeppjikgn
