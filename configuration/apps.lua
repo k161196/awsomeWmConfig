@@ -1,10 +1,16 @@
-local filesystem = require('gears.filesystem')
+local filesystem = require 'gears.filesystem'
 
 -- Thanks to jo148 on github for making rofi dpi aware!
 local with_dpi = require('beautiful').xresources.apply_dpi
 local get_dpi = require('beautiful').xresources.get_dpi
 -- local rofi_command = 'env /usr/bin/rofi -dpi ' .. get_dpi() .. ' -width ' .. with_dpi(400) .. ' -show drun -theme ' .. filesystem.get_configuration_dir() .. '/configuration/rofi.rasi -run-command "/bin/bash -c -i \'shopt -s expand_aliases; {cmd}\'"'
-local rofi_command = 'env /usr/bin/rofi -dpi ' .. get_dpi() .. ' -width ' .. with_dpi(400) .. ' -show drun -theme ' .. filesystem.get_configuration_dir() .. '/configuration/rofiThemes/1.rasi -run-command "/bin/bash -c -i \'shopt -s expand_aliases; {cmd}\'"'
+local rofi_command = 'env /usr/bin/rofi -dpi '
+  .. get_dpi()
+  .. ' -width '
+  .. with_dpi(400)
+  .. ' -show drun -theme '
+  .. filesystem.get_configuration_dir()
+  .. '/configuration/rofiThemes/1.rasi -run-command "/bin/bash -c -i \'shopt -s expand_aliases; {cmd}\'"'
 
 return {
   -- List of apps to start by default on some actions
@@ -32,10 +38,10 @@ return {
     -- notion = 'gtk-launch brave-momfioececahhohbolddgklgdgacbedf-Default.desktop',
     notion = 'gtk-launch notion.desktop',
     youtube = 'gtk-launch brave-agimnkijcaahngcdmfeangaknmldooml-Profile_1.desktop',
-    chromium ="chromium-browser",
-    chrome="google-chrome",
-    logseq="flatpak run com.logseq.Logseq",
-    jira="gtk-launch brave-dplnncmfgnlkcegohoadddndggiiljgl-Default.desktop"
+    chromium = 'chromium-browser',
+    chrome = 'google-chrome',
+    logseq = 'flatpak run com.logseq.Logseq',
+    jira = 'gtk-launch brave-dplnncmfgnlkcegohoadddndggiiljgl-Default.desktop',
   },
   -- List of apps to start once on start-up
   run_on_start_up = {
@@ -49,13 +55,13 @@ return {
     --  'flameshot',
     --  'synology-drive -minimized',
     --  'steam -silent',
-    'feh --randomize --bg-fill ~/.wallpapers/*',
+    'feh --randomize --bg-fill ~/.wallpapers/scenes/*',
     '/usr/bin/variety',
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script
     '~/.config/awesome/configuration/awspawn', -- Spawn "dirty" apps that can linger between sessions
     'xinput set-prop "SYNA7DB5:01 06CB:7DB7 Touchpad" "libinput Tapping Enabled" 1',
     'xinput set-prop "SYNA7DB5:01 06CB:7DB7 Touchpad" "libinput Natural Scrolling Enabled" 1',
-    'xinput set-prop "SYNA7DB5:01 06CB:7DB7 Touchpad" "libinput Natural Scrolling Enabled" 1'
-  }
+    'xinput set-prop "SYNA7DB5:01 06CB:7DB7 Touchpad" "libinput Natural Scrolling Enabled" 1',
+  },
 }

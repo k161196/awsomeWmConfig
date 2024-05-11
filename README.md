@@ -107,3 +107,8 @@ sudo nano ~/.bash_aliases
 alias reduceBrightness="xrandr --output HDMI-1 --brightness 0.5"
 alias reduceBrightness1="xrandr --output HDMI-1 --brightness 1"
 ```
+
+terminal changes
+```
+starship 
+```
