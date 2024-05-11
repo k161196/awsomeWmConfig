@@ -309,3 +309,34 @@ dbever-ce
 https://github.com/TheAssassin/AppImageLauncher/releases/tag/v2.2.0
 https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-lite-2.2.0-travis995-0f91801-i386.AppImage
 ```
+```
+https://medium.com/@bigdsdojo/utilizing-nvidia-gpu-for-specific-applications-on-linux-a-simple-script-approach-6bb122cc5b3c
+
+```
+```
+#nv-run
+#!/bin/bash
+
+# Check if at least one argument is provided
+if [[ $# -lt 1 ]]; then
+    echo "Usage: $0 <program> [arguments]"
+    exit 1
+fi
+
+# Get the program name and the arguments
+program=$1
+shift  # Shift the arguments to remove the first one
+arguments="$@"
+
+# Run the program with the NVIDIA GPU
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia $program $arguments
+```
+
+```
+sudo mv nv-run /usr/local/bin/
+sudo chmod +x /usr/local/bin/nv-run
+```
+
+```
+nv-run alacritty
+```
