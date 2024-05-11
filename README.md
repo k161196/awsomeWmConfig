@@ -270,6 +270,7 @@ starship
 sudo nano ~/.bash_aliases
 alias reduceBrightness="xrandr --output HDMI-1 --brightness 0.5"
 alias reduceBrightness1="xrandr --output HDMI-1 --brightness 1"
+alias watch-nvidia="watch -n -1 nvidia-smi"
 ```
 
 terminal changes
