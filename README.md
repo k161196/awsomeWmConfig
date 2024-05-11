@@ -340,3 +340,6 @@ sudo chmod +x /usr/local/bin/nv-run
 ```
 nv-run alacritty
 ```
+```
+watch -n -1 nvidia-smi // check nvidia status
+```
