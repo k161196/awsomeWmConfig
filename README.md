@@ -274,7 +274,19 @@ alias reduceBrightness1="xrandr --output HDMI-1 --brightness 1"
 
 terminal changes
 ```
-starship 
+starship
+curl -sS https://starship.rs/install.sh | sh
+eval "$(starship init bash)"
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+```
+
+```
+https://www.nerdfonts.com/
+https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+sudo mkdir ~/.fonts
+sudo mv *.ttf ~/.fonts
+fc-cache -fv
+
 ```
 
 ```
