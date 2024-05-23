@@ -1,6 +1,6 @@
-local awful = require('awful')
-local gears = require('gears')
-local beautiful = require('beautiful')
+local awful = require 'awful'
+local gears = require 'gears'
+local beautiful = require 'beautiful'
 
 local function renderClient(client, mode)
   if client.skip_decoration or (client.rendering_mode == mode) then
@@ -24,6 +24,7 @@ local function renderClient(client, mode)
     end
   elseif client.rendering_mode == 'tiled' then
     client.border_width = beautiful.border_width
+    -- client.border_width = 5
     client.shape = function(cr, w, h)
       gears.shape.rounded_rect(cr, w, h, 8)
     end
@@ -42,7 +43,7 @@ local function changesOnScreen(currentScreen)
     end
   end
 
-  if (tagIsMax or #clientsToManage == 1) then
+  if tagIsMax or #clientsToManage == 1 then
     currentScreen.client_mode = 'maximized'
   else
     currentScreen.client_mode = 'tiled'
@@ -59,11 +60,9 @@ function clientCallback(client)
     if not client.skip_decoration and client.screen then
       changesOnScreenCalled = true
       local screen = client.screen
-      gears.timer.delayed_call(
-        function()
-          changesOnScreen(screen)
-        end
-      )
+      gears.timer.delayed_call(function()
+        changesOnScreen(screen)
+      end)
     end
   end
 end
@@ -73,11 +72,9 @@ function tagCallback(tag)
     if tag.screen then
       changesOnScreenCalled = true
       local screen = tag.screen
-      gears.timer.delayed_call(
-        function()
-          changesOnScreen(screen)
-        end
-      )
+      gears.timer.delayed_call(function()
+        changesOnScreen(screen)
+      end)
     end
   end
 end
@@ -90,16 +87,13 @@ _G.client.connect_signal('property::hidden', clientCallback)
 
 _G.client.connect_signal('property::minimized', clientCallback)
 
-_G.client.connect_signal(
-  'property::fullscreen',
-  function(c)
-    if c.fullscreen then
-      renderClient(c, 'maximized')
-    else
-      clientCallback(c)
-    end
+_G.client.connect_signal('property::fullscreen', function(c)
+  if c.fullscreen then
+    renderClient(c, 'maximized')
+  else
+    clientCallback(c)
   end
-)
+end)
 
 -- _G.tag.connect_signal('property::selected', tagCallback)
 
