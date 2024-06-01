@@ -99,26 +99,32 @@ local TopPanel = function(s)
     y = s.geometry.y,
     stretch = false,
     bg = beautiful.background.hue_800,
+    -- bg = '#00000066',
+    -- fg='#FF0000',
     fg = beautiful.fg_normal,
     struts = {
       top = dpi(32),
     },
   }
-
+  --   panel.border_width  = dpi(10)
+  -- panel.border_color = "#ffffff00"
   panel:struts {
     top = dpi(32),
   }
 
   panel:setup {
     layout = wibox.layout.align.horizontal,
+    expand = 'none',
     {
       layout = wibox.layout.fixed.horizontal,
       -- Create a taglist widget
       TagList(s),
       TaskList(s),
-      add_button,
+      -- add_button,
     },
-    nil,
+    -- nil,
+    wibox.container.place(clock_widget, 'center', 'center'),
+    -- TagList(s),
     {
       layout = wibox.layout.fixed.horizontal,
       -- Layout box
@@ -162,10 +168,10 @@ local TopPanel = function(s)
         collectgarbage 'collect'
       end),
       wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
-      LayoutBox(s),
       BAT0,
+      LayoutBox(s),
       -- Clock
-      clock_widget,
+      -- clock_widget,
     },
   }
 

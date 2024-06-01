@@ -1,8 +1,8 @@
 local gears = require 'gears'
 local awful = require 'awful'
-local wibox = require 'wibox'
+-- local wibox = require 'wibox'
 require 'awful.autofocus'
-local naughty = require 'naughty'
+-- local naughty = require 'naughty'
 
 local beautiful = require 'beautiful'
 
@@ -94,10 +94,14 @@ _G.client.connect_signal(
 _G.client.connect_signal('focus', function(c)
   c.border_color = beautiful.border_focus
   c.border_width = beautiful.border_width
+ if #c.screen.clients > 1  then 
   c.shape = function(cr, w, h)
     gears.shape.rounded_rect(cr, w, h, 8)
   end
+  else
+      c.border_color = beautiful.border_normal
 
+  end
   -- c.border_color = '#FF3131'
   -- #FF3131
 end)

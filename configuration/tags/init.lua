@@ -83,7 +83,7 @@ local tags = {
 awful.layout.layouts = {
   awful.layout.suit.tile,
   awful.layout.suit.max,
-  awful.layout.suit.floating
+  -- awful.layout.suit.floating
 }
 
 awful.screen.connect_for_each_screen(
@@ -99,7 +99,8 @@ awful.screen.connect_for_each_screen(
           gap = 2,
           screen = s,
           defaultApp = tag.defaultApp,
-          selected = i == 1
+          selected = i == 1,
+          index = i
         }
       )
     end

@@ -79,21 +79,21 @@ local function list_update(w, buttons, label, data, objects)
       bg_clickable = clickable_container()
       bgb = wibox.container.background()
       tbm = wibox.container.margin(tb, dpi(4), dpi(4))
-      ibm = wibox.container.margin(ib, dpi(4), dpi(4), dpi(4), dpi(4))
+      ibm = wibox.container.margin(ib, dpi(4), dpi(4), dpi(6), dpi(6))
       l = wibox.layout.fixed.horizontal()
       ll = wibox.layout.fixed.horizontal()
 
       -- All of this is added in a fixed widget
       l:fill_space(true)
       l:add(ibm)
-      l:add(tbm)
+      -- l:add(tbm)
       ll:add(l)
-      ll:add(cbm)
+      -- ll:add(cbm)
 
       bg_clickable:set_widget(ll)
       -- And all of this gets a background
       bgb:set_widget(bg_clickable)
-
+      -- bgb.bg = '#181825'
       l:buttons(create_buttons(buttons, o))
 
       -- Tooltip to display whole title, if it was truncated
@@ -118,6 +118,7 @@ local function list_update(w, buttons, label, data, objects)
     args = args or {}
 
     -- The text might be invalid, so use pcall.
+    text = nil
     if text == nil or text == '' then
       tbm:set_margins(0)
     else
@@ -145,7 +146,10 @@ local function list_update(w, buttons, label, data, objects)
     else
       ibm:set_margins(0)
     end
-
+-- if o.selected then 
+-- bgb.bg = '#ff0000'
+    -- else 
+    -- end
     bgb.shape = args.shape
     bgb.shape_border_width = args.shape_border_width
     bgb.shape_border_color = args.shape_border_color

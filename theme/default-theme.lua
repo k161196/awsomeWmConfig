@@ -53,7 +53,7 @@ local awesome_overrides = function(theme)
   theme.menu_width = dpi(160)
 
   -- Tooltips
-  theme.tooltip_bg = '#232323'
+  -- theme.tooltip_bg = '#232323'
   --theme.tooltip_border_color = '#232323'
   theme.tooltip_border_width = 0
   theme.tooltip_shape = function(cr, w, h)
@@ -94,31 +94,48 @@ local awesome_overrides = function(theme)
 
   theme.tasklist_font = 'Roboto medium 11'
   theme.tasklist_bg_normal = theme.background.hue_800
-  theme.tasklist_bg_focus = 'linear:0,0:0,'
+  -- theme.tasklist_bg_focus = 'linear:0,0:'
+  --    .. dpi(40)
+  --    .. ',0:0,'
+  --    .. theme.primary.hue_500
+  --    .. ':0.08,'
+  --    .. theme.primary.hue_500
+  --    .. ':0.08,'
+  --    .. theme.background.hue_800
+  --    .. ':1,'
+  --    .. theme.background.hue_800
+
+  theme.tasklist_bg_focus = 'linear:0,'
     .. dpi(40)
+    .. ':'
+    .. '0'
+    .. ','
+    .. '0'
     .. ':0,'
+    .. theme.primary.hue_500
+    .. ':0.3,'
+    .. theme.primary.hue_500
+    .. ':0.3,'
     .. theme.background.hue_800
-    .. ':0.95,'
-    .. theme.background.hue_800
-    .. ':0.95,'
-    .. theme.fg_normal
     .. ':1,'
-    .. theme.fg_normal
+    .. theme.background.hue_800
+
   theme.tasklist_bg_urgent = theme.primary.hue_800
   theme.tasklist_fg_focus = '#DDDDDD'
   theme.tasklist_fg_urgent = theme.fg_normal
   theme.tasklist_fg_normal = '#AAAAAA'
-
+  -- theme.tasklist_shape_border_width_focus = dpi(10)
+  -- theme.tasklist_shape_border_color_focus = theme.primary.hue_500
   theme.icon_theme = 'Papirus-Dark'
 
   --Client
-  theme.border_width = dpi(1) -- working
-  -- theme.border_focus = theme.primary.hue_500
-  theme.border_focus = theme.red.hue_800
+  theme.border_width = dpi(0.5) -- working
+  -- theme.border_focus = '#89b4fa'
+  theme.border_focus = theme.primary.hue_500
+  -- theme.border_focus = theme.red.hue_800
   theme.border_normal = theme.background.hue_800
 end
 return {
   theme = theme,
   awesome_overrides = awesome_overrides,
 }
-
