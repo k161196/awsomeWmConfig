@@ -16,14 +16,15 @@ return {
   -- List of apps to start by default on some actions
   default = {
     -- terminal = 'gnome-terminal',
-    terminal = 'nv-run alacritty',
+    -- terminal = 'nv-run alacritty',
+    terminal = 'nv-run kitty',
     rofi = rofi_command,
     lock = 'i3lock-fancy',
     quake = 'terminator',
     screenshot = 'flameshot screen -p ~/Pictures',
     region_screenshot = 'flameshot gui -p ~/Pictures',
     delayed_screenshot = 'flameshot screen -p ~/Pictures -d 5000',
-    browser = 'nv-run firefox',
+    browser = 'firefox',
     --browser = 'brave-browser',
     devBrowser = 'flatpak run io.gitlab.librewolf-community',
     editor = 'code', -- gui text editor
